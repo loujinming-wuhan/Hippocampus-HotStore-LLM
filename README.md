@@ -19,7 +19,6 @@ def detect_hot_entities(user_queries):
     return top_k_entities(hot_score)  # 输出TOP1000热点实体
 
 ### 2. 动态摘要蒸馏器 ⚗️
-```mermaid
 graph LR
     A[原始网页] --> B(LLM提取三层摘要)
     B --> C{L1：核心事实}
@@ -28,7 +27,6 @@ graph LR
     C --> F[热库存储]
     D --> F
     E --> F
-```
 
 ### 3. 关联推理触发器 ⚡
 **工作流程**：  
