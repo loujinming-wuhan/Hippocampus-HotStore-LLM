@@ -1,3 +1,4 @@
+```markdown
 # 🧠 海马体热库架构：动态实时知识蒸馏系统
 > **原创提案**：采菊东篱下@楼金铭（GitHub ID: loujinming-wuhan）  
 > **提案日期**：2025年6月13日  
@@ -17,8 +18,10 @@ def detect_hot_entities(user_queries):
     # 基于频次/突发性/传播强度的热度算法
     hot_score = frequency * (1 + burst_factor) * propagation_index 
     return top_k_entities(hot_score)  # 输出TOP1000热点实体
+```
 
 ### 2. 动态摘要蒸馏器 ⚗️
+```mermaid
 graph LR
     A[原始网页] --> B(LLM提取三层摘要)
     B --> C{L1：核心事实}
@@ -27,6 +30,7 @@ graph LR
     C --> F[热库存储]
     D --> F
     E --> F
+```
 
 ### 3. 关联推理触发器 ⚡
 **工作流程**：  
